@@ -1,16 +1,22 @@
+using System;
+using AnimeWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimeWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        // GET
+        private ApplicationDbContext _db;
+        public HomeController(ApplicationDbContext context)
+        {
+            _db = context;
+        }
         public IActionResult Index()
         {
             return View();
         }
         
-        public IActionResult Privacy()
+        public IActionResult MainPage()
         {
             return View();
         }

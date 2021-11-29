@@ -1,10 +1,131 @@
-﻿@page
-@model IndexModel
+﻿@model Models.User
 @{
-    //ViewData["Title"] = "Home page";
+  Layout = null;
 }
-<a asp-controller="Home" asp-action="Privacy">Privacy</a>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="~/css/Main_Page_StyleSheet.css">
+</head>
+
+<body>  
+<div class=content-block>
+  <div class="popular">
+    <div class="popular_block">ПОПУЛЯРНОЕ</div>
+    <div class="carousel_block">
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <div class="block">
+    <div class=title-update>
+      <div class="col-container">ОБНОВЛЕНИЕ АНИМЕ</div>
+      <div class=title_update_strings>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+        <span class="update_time"></span>
+        <div class="title_update_string"></div>
+      </div>
+    </div>
+    <div class=news_block>
+      <div class="col-container">НОВОСТИ</div>
+      <div class="update_strings">
+        <div class="string"></div>
+        <span class="update_time"></span>
+        <div class="string"></div>
+        <span class="update_time"></span>
+        <div class="string"></div>
+        <span class="update_time"></span>
+        <div class="string"></div>
+        <span class="update_time"></span>
+        <div class="string"></div>
+        <span class="update_time"></span>
+        <div class="string"></div>
+        <span class="update_time"></span>
+        <div class="string"></div>
+        <span class="update_time"></span>
+      </div>
+      <div class="anounces-block">
+        <div class="preview-container">АНОНСЫ</div>
+        <div class="preview_strings">
+          <div class="string"></div>
+          <span class="update_time"></span>
+          <div class="string"></div>
+          <span class="update_time"></span>
+          <div class="string"></div>
+          <span class="update_time"></span>
+          <div class="string"></div>
+          <span class="update_time"></span>
+          <div class="string"></div>
+          <span class="update_time"></span>
+          <div class="string"></div>
+          <span class="update_time"></span>
+          <div class="string"></div>
+          <span class="update_time"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="new_title">
+    <div class="name">НОВОЕ НА САЙТЕ</div>
+    <div class="carousel_block">
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="item fade"></div>
+      <div class="itemf ade"></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
