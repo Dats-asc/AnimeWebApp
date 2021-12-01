@@ -1,45 +1,103 @@
-﻿<!DOCTYPE html>
+﻿<html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - AnimeWebApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../../wwwroot/css/Main_Page_StyleSheet.css">
 </head>
+
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index">AnimeWebApp</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <div class=top>
+    <div class=container>
+      <div class=auth-block>
+        <div class=login>
+          <div class="dropdown-login">
+            <button class="btn" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false" href="#">
+              ВХОД
             </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                    </li>
-                </ul>
+            <div class="dropdown-menu" aria-labelledby="triggerId">
+              <form action="email">
+                <input class="email" placeholder="E-mail">
+              </form>
+              <form action="password">
+                <input class="password" placeholder="Пароль">
+              </form>
+              <form action="#">
+                <button class=enter>ВОЙТИ</button>
+              </form>
+              <a class="lossPassword" href="#">Забыли пароль?</a>
             </div>
+          </div>
         </div>
-    </nav>
-</header>
-<div class="container">
+        <a class=register asp-controller="Account" asp-action="Registration"> РЕГИСТРАЦИЯ
+        </a>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+    <div class=row>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" asp-controller="Home" asp-action="Index">ГЛАВНАЯ <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">КАТАЛОГ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ТОП-100</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">СЛУЧАЙНОЕ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ПОМОЩЬ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">О НАС</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ПРАВИЛА</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ПРОСМОТРЕННОЕ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ВАША СТАТИСТИКА</a>
+          </li>
+          <div class="form-group col-lg-8">
+            <input type="search" class="form-control " name="" id="" aria-describedby="helpId"
+              placeholder="НАЙТИ АНИМЕ ПО НАЗВАНИЮ">
+            <button class="search_btn">
+              <img src="../wwwroot/img/лупа.svg" alt="">
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
 </div>
-
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2021 - AnimeWebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
+  
+  <footer class="footer">
+    <div class="footer_container">
+      <p>Это футер</p>
+      <p>Потом здесь будет что-то важное</p>
+      <p>Надеюсь на это</p>
     </div>
-</footer>
+  </footer>
+
+
+
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

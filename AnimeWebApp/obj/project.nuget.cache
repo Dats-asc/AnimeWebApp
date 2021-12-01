@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sx1TzHwc+mm7hOTF4ZZzuWGMYYDMS42TM/3H0vGAfmOj1Pb1L7WyoNOqLVfipuxPvYwcGZtfW91hwF0tJKLJKw==",
+  "dgSpecHash": "ad/suNpMI5Fm9L/wd2QF4VDjvYf1VypJMphFHLKMxMMcDvCzjQ+in8MNNDTmy0pSl7STTAN6sjvLlOJNAFpurA==",
   "success": true,
   "projectFilePath": "/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj",
   "expectedPackageFiles": [
@@ -25,7 +25,8 @@
     "/Users/rustamhajrullin/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "/Users/rustamhajrullin/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "/Users/rustamhajrullin/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "/Users/rustamhajrullin/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
