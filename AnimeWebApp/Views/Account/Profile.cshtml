@@ -1,0 +1,68 @@
+@model Models.ProfileViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <title></title>
+</head>
+<body>
+
+<p class="h1 text-center">Profile data</p>
+
+<div class="container">
+    @{
+        if (Model.Sex != null)
+        {
+            <p>Sex = @Model.Sex</p>
+        }
+        else
+        {
+            <p>Sex = null</p>
+        }
+        if (Model.City != null)
+        {
+            <p>City = @Model.City</p>
+        }
+        else
+        {
+            <p>Sex = null</p>
+        }
+        if (Model.Description != null)
+        {
+            <p>Desc = @Model.Description</p>
+        }
+        else
+        {
+            <p>Desc = null</p>
+        }
+    }
+</div>
+
+
+<form asp-action="Profile" asp-controller="Account">
+    <div class="container">
+        <div class="row" style="margin: 20px 0">
+            Sex : <input style="margin: 5px 10px" type="text" placeholder="sex" asp-for="Sex"/>
+        </div>
+        <div class="row" style="margin: 20px 0">
+            City : <input style="margin: 5px 10px" type="text" placeholder="city" asp-for="City"/>
+        </div>
+        <div class="row" style="margin: 20px 0">
+            Description : <input style="margin: 5px 10px" type="text" placeholder="desc" asp-for="Description"/>
+        </div>
+        <div class="row">
+            <button type="submit">Change</button>
+        </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -8,24 +8,41 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/registration_page.css"/>
     <title></title>
 </head>
 <body>
-<div>
-    <form asp-action="Registration" asp-controller="Account">
-        <div class="container">
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6">
-                    <input type="text" placeholder="email" asp-for="Email"/>
-                    <input type="text" placeholder="username" asp-for="Username"/>
-                    <input type="text" placeholder="password" asp-for="Password"/>
-                    <input type="text" placeholder="confirm password" asp-for="ConfirmPassword"/>
-                    <button type="submit">Sign up</button>
-                </div>
+
+<div class="main-page">
+    <div class=content-page>
+        <h1 class="registrationnew">Регистрация нового пользователя</h1>
+        <div class="rules">
+            <ol>
+                <p>Все поля обязательны</p>
+                <p>Регистрируясь на нашем сайте вы автоматически соглашаетесь соблюдать <a target=_blank href="#">правила.</a> </p>
+                <p>После заполнения формы вам на e-mail придет письмо с подтверждением.</p> 
+            </ol>
+        </div> 
+        <form asp-action="Registration" asp-controller="Account" asp-antiforgery="true">
+            <div class="validation" asp-validation-summary="ModelOnly"></div>
+            <div class="fields">
+                <input type="text" placeholder="Ваш E-mail" asp-for="Email">
+                <span asp-validation-for="Email"></span>
+                <input type="text" placeholder="Ваш ник, под ним вас будут видеть другие пользователи" asp-for="Username">
+                <span asp-validation-for="Username"></span>
+                <input type="text" placeholder="Пароль" asp-for="Password">
+                <span asp-validation-for="Password"></span>
+                <input type="text" placeholder="Повтор пароля" asp-for="ConfirmPassword">
+                <span asp-validation-for="ConfirmPassword"></span>
+                <button type="submit" class="btn">Зарегистрироваться</button>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script><!--подключение jquery-->
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>

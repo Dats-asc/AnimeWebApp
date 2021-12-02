@@ -5,9 +5,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../../wwwroot/css/Main_Page_StyleSheet.css">
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="~/css/Main_Page_StyleSheet.css">
 </head>
 
 <body>
@@ -16,26 +15,12 @@
       <div class=auth-block>
         <div class=login>
           <div class="dropdown-login">
-            <button class="btn" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" href="#">
+            <a class="btn" asp-controller="Account" asp-action="Login">
               ВХОД
-            </button>
-            <div class="dropdown-menu" aria-labelledby="triggerId">
-              <form action="email">
-                <input class="email" placeholder="E-mail">
-              </form>
-              <form action="password">
-                <input class="password" placeholder="Пароль">
-              </form>
-              <form action="#">
-                <button class=enter>ВОЙТИ</button>
-              </form>
-              <a class="lossPassword" href="#">Забыли пароль?</a>
-            </div>
+            </a>
           </div>
         </div>
-        <a class=register asp-controller="Account" asp-action="Registration"> РЕГИСТРАЦИЯ
-        </a>
+        <a class=register asp-controller="Account" asp-action="Registration"> РЕГИСТРАЦИЯ</a>
       </div>
     </div>
   </div>
@@ -96,12 +81,8 @@
     </div>
   </footer>
 
-
-
-
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

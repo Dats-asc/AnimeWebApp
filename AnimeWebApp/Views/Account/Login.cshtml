@@ -1,19 +1,33 @@
-@page
-@model AnimeWebApp.Views.Account.Login
+@model Models.LoginViewModel
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <title></title>
 </head>
 <body>
 <div>
-    
+    <form asp-action="Login" asp-controller="Account" asp-antiforgery="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <input type="text" class="row" style="margin: 20px 0" placeholder="email" asp-for="Email"/>
+                    <input type="text" class="row" style="margin: 20px 0" placeholder="password" asp-for="Password"/>
+                    <button type="submit" class="row" style="margin: 20px 0">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
