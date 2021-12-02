@@ -47,4 +47,12 @@
 /Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/obj/Debug/net5.0/Razor/Views/Home/MainPage.cshtml.g.cs
 /Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/obj/Debug/net5.0/Razor/Views/Account/Registration.cshtml.g.cs
 /Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/obj/Debug/net5.0/Razor/Views/Account/Login.cshtml.g.cs
-/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/obj/Debug/net5.0/staticwebassets/AnimeWebApp.StaticWebAssets.xml
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/AnimeWebApp.StaticWebAssets.xml
+/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/bin/Debug/net5.0/AnimeWebApp

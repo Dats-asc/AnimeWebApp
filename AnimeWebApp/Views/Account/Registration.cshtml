@@ -1,8 +1,7 @@
-@page
-@model AnimeWebApp.Views.Account.Registration
+@model Models.RegistrationViewModel
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
@@ -13,7 +12,20 @@
 </head>
 <body>
 <div>
-    
+    <form asp-action="Registration" asp-controller="Account">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <input type="text" placeholder="email" asp-for="Email"/>
+                    <input type="text" placeholder="username" asp-for="Username"/>
+                    <input type="text" placeholder="password" asp-for="Password"/>
+                    <input type="text" placeholder="confirm password" asp-for="ConfirmPassword"/>
+                    <button type="submit">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

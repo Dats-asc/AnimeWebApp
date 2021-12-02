@@ -2,7 +2,9 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AnimeWebApp.Models;
+using AnimeWebApp.Views.Account;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AnimeWebApp.Controllers
 {
@@ -23,26 +25,35 @@ namespace AnimeWebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ViewResult> Registration(UserViewModel model)
+        public async Task<ViewResult> Registration(RegistrationViewModel model)
         {
-            User user =  _db.Users.FirstOrDefault(u => u.Email == model.Email);
-            if (user == null)
+            if (ModelState.IsValid && model.Password == model.ConfirmPassword)
             {
-                var newUser = new User()
+                if (ModelState.IsValid)
                 {
-                    Id = Guid.NewGuid(),
-                    Email = model.Email,
-                    Username = model.Username,
-                    Password = model.Password
-                };
-                _db.Add(newUser);
-                await _db.SaveChangesAsync();
-                //return RedirectToAction("Index", "Home");
+                    User user = await _db.Users.FirstOrDefaultAsync(u => u.Email == model.Email || u.Username == model.Username);
+                    if (user == null)
+                    {
+                        var currentUser = new User
+                        {
+                            Id = Guid.NewGuid(),
+                            Email = model.Email,
+                            Password = Encryption.EncryptString(model.Password),
+                            Username = model.Username,
+                        };
+                        _db.Users.Add(currentUser);
+                        await _db.SaveChangesAsync();
+
+                        //await Authentificate(currentUser);
+
+                        //return RedirectToAction("Index", "Home");
+                    }
+                    else
+                        ModelState.AddModelError("", $"Пользователь с почтой {model.Email} уже зарегистрирован.");
+                }
             }
             else
-            {
-                ModelState.AddModelError("", "Email already registered");
-            }
+                ModelState.AddModelError("", $"Не все поля заполнены.");
             return View(model);
         }
     }
