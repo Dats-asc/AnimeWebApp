@@ -14,37 +14,6 @@
 <body>
 
 <p class="h1 text-center">Profile data</p>
-
-<div class="container">
-    @{
-        if (Model.Sex != null)
-        {
-            <p>Sex = @Model.Sex</p>
-        }
-        else
-        {
-            <p>Sex = null</p>
-        }
-        if (Model.City != null)
-        {
-            <p>City = @Model.City</p>
-        }
-        else
-        {
-            <p>Sex = null</p>
-        }
-        if (Model.Description != null)
-        {
-            <p>Desc = @Model.Description</p>
-        }
-        else
-        {
-            <p>Desc = null</p>
-        }
-    }
-</div>
-
-
 <form asp-action="Profile" asp-controller="Account">
     <div class="container">
         <div class="row" style="margin: 20px 0">

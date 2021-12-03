@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6jk+zP3OVON7LF1IdYJ59vBuEx4jMsIv8g/P6RrIfBgDIGDb8DIyPVHuTw7jMiybiCURnHZCjJpTnyD0PF34XA==",
+  "dgSpecHash": "L2OV3I3QG3C3Pl2iJA2PoOv+U1pIzKuqFB1yEAiveMoy/hODz5HvajXmnmA5nEo7aSwksvYrgWKLF7K1SeH2IA==",
   "success": true,
   "projectFilePath": "/Users/rustamhajrullin/RiderProjects/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj",
   "expectedPackageFiles": [
     "/Users/rustamhajrullin/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/rustamhajrullin/.nuget/packages/jquery/3.6.0/jquery.3.6.0.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.12/microsoft.aspnetcore.authentication.jwtbearer.5.0.12.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/microsoft.entityframeworkcore/5.0.12/microsoft.entityframeworkcore.5.0.12.nupkg.sha512",
@@ -26,6 +27,7 @@
     "/Users/rustamhajrullin/.nuget/packages/microsoft.identitymodel.protocols/6.7.1/microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.7.1/microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/microsoft.identitymodel.tokens/6.7.1/microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
+    "/Users/rustamhajrullin/.nuget/packages/microsoft.jquery.unobtrusive.ajax/3.2.6/microsoft.jquery.unobtrusive.ajax.3.2.6.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/npgsql/5.0.11/npgsql.5.0.11.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/npgsql.entityframeworkcore.postgresql/5.0.10/npgsql.entityframeworkcore.postgresql.5.0.10.nupkg.sha512",
     "/Users/rustamhajrullin/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",

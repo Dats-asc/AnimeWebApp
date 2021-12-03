@@ -1,3 +1,5 @@
+using System;
+
 namespace AnimeWebApp.Models
 {
     public class ProfileViewModel
@@ -8,6 +10,7 @@ namespace AnimeWebApp.Models
         public string? Sex { get; set; }
         public string? City { get; set; }
         public string? Description { get; set; }
+        //public string RegistrationDate { get; set; }
         
         public User ProfileOwner { get; set; }
     }

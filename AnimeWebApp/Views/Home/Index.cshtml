@@ -2,6 +2,7 @@
 @{
   Layout = "_Layout";
 }
+
 <html>
 <!doctype html>
 <html lang="en">
@@ -126,13 +127,14 @@
   }
 }
 
-<a asp-action="Profile" asp-controller="Account"></a>
+<a asp-action="Profile" asp-controller="Account">Profile</a>
 
 <div>
   <form asp-action="Logout" asp-controller="Account" asp-antiforgery="true">
     <button type="submit">Logout</button>
   </form>
 </div>
+
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

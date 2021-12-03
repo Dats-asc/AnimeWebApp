@@ -39,15 +39,16 @@ namespace AnimeWebApp.Controllers
                     User user = await _db.Users.FirstOrDefaultAsync(u => u.Email == model.Email || u.Username == model.Username);
                     if (user == null)
                     {
+                        var newId = Guid.NewGuid();
                         var currentUser = new User
                         {
-                            Id = Guid.NewGuid(),
+                            Id = newId,
                             Email = model.Email,
                             Password = Encryption.EncryptString(model.Password),
                             Username = model.Username,
                             UserProfile = new Profile()
                             {
-                                Id = Guid.NewGuid()
+                                Id = newId,
                             }
                         };
                         _db.Users.Add(currentUser);
@@ -107,17 +108,12 @@ namespace AnimeWebApp.Controllers
         [HttpGet]
         public IActionResult Profile()
         {
-            if (Request.Cookies["token"] != null)
+            if (Request.Cookies["token"] == null)
                 return RedirectToAction("Index", "Home");
             else
             {
-                var stream = Request.Cookies["token"];
-                var handler = new JwtSecurityTokenHandler();
-                var jsonToken = handler.ReadToken(stream);
-                var tokenS = jsonToken as JwtSecurityToken;
-                var id = tokenS.Claims.First(claim => claim.Type == "nameid").Value;
-                var user = _db.Users.FirstOrDefault(u => u.Id.ToString() == id);
-                var userProfile = user.UserProfile;;
+                var user = FindUserByToken();
+                var userProfile = _db.PoProfiles.FirstOrDefault(p => p.Id == user.Id);
                 var model = new ProfileViewModel()
                 {
                     Sex = userProfile.Sex,
@@ -131,7 +127,25 @@ namespace AnimeWebApp.Controllers
         [HttpPost]
         public IActionResult Profile(ProfileViewModel model)
         {
-            return Ok();
+            var user = FindUserByToken();
+            var profile = _db.PoProfiles.FirstOrDefault(p => p.Id == user.Id);
+            profile.Sex = model.Sex;
+            profile.City = model.City;
+            profile.Description = model.Description;
+            _db.Update(profile);
+            _db.SaveChangesAsync();
+            return RedirectToAction("Profile", "Account");
+        }
+
+        private User FindUserByToken()
+        {
+            var stream = Request.Cookies["token"];
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(stream);
+            var tokenS = jsonToken as JwtSecurityToken;
+            var id = tokenS.Claims.First(claim => claim.Type == "nameid").Value;
+            var user = _db.Users.FirstOrDefault(u => u.Id.ToString() == id);
+            return user;
         }
     }
 }
