@@ -19,7 +19,7 @@ namespace AnimeWebApp.Controllers
             
             if (Request.Cookies["token"] == null || Request.Cookies["token"] == "")
             {
-                return View(null);
+                return View();
             }
             var stream = Request.Cookies["token"];
             var handler = new JwtSecurityTokenHandler();

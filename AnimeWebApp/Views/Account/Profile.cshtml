@@ -14,22 +14,27 @@
 <body>
 
 <p class="h1 text-center">Profile data</p>
-<form asp-action="Profile" asp-controller="Account">
-    <div class="container">
-        <div class="row" style="margin: 20px 0">
-            Sex : <input style="margin: 5px 10px" type="text" placeholder="sex" asp-for="Sex"/>
-        </div>
-        <div class="row" style="margin: 20px 0">
-            City : <input style="margin: 5px 10px" type="text" placeholder="city" asp-for="City"/>
-        </div>
-        <div class="row" style="margin: 20px 0">
-            Description : <input style="margin: 5px 10px" type="text" placeholder="desc" asp-for="Description"/>
-        </div>
-        <div class="row">
-            <button type="submit">Change</button>
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form asp-action="Profile" asp-controller="Account">
+                <div class="row" style="margin: 20px 0">
+                    Пол : <input class="form-control" style="margin: 5px 10px" type="text" placeholder="sex" asp-for="Sex"/>
+                </div>
+                <div class="row" style="margin: 20px 0">
+                    Город : <input class="form-control" style="margin: 5px 10px" type="text" placeholder="city" asp-for="City"/>
+                </div>
+                <div class="row input-group" style="margin: 20px 0">
+                    Описание : <textarea class="form-control" style="margin: 5px 10px" type="text" placeholder="desc" asp-for="Description"></textarea>
+                </div>
+                <div class="row">
+                    <button type="submit">Change</button>
+                </div>
+            </form>
         </div>
     </div>
-</form>
+</div>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -52,10 +52,6 @@
               "target": "Package",
               "version": "[5.0.12, )"
             },
-            "Microsoft.jQuery.Unobtrusive.Ajax": {
-              "target": "Package",
-              "version": "[3.2.6, )"
-            },
             "Npgsql": {
               "target": "Package",
               "version": "[5.0.11, )"
@@ -67,10 +63,6 @@
             "System.Security.Principal.Windows": {
               "target": "Package",
               "version": "[5.0.0, )"
-            },
-            "jQuery": {
-              "target": "Package",
-              "version": "[3.6.0, )"
             }
           },
           "imports": [
